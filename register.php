@@ -19,7 +19,7 @@ $sql = "INSERT INTO userdetails (user,psw, aadhar, ACNO, Initial) VALUES ('user'
 }
 else
 {  
-	$message = "Maa Chudao"; 
+	$message = "Please Try Again"; 
 }
 	echo "<script type='text/javascript'>alert('$message');</script>";
 }
