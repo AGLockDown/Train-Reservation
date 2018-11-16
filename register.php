@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost","root","","railway");
+$conn = mysqli_connect("localhost","root","","traindb");
 if(!$conn){  
 	echo "<script type='text/javascript'>alert('Database failed');</script>";
   	die('Could not connect: '.mysqli_connect_error());  
@@ -12,14 +12,14 @@ $psw=$_POST['psw'];
 $aadhar=$_POST['aadhar'];
 $ACNO=$_POST['Account'];
 $Initial=$_POST['initialamo'];
-$sql = "INSERT INTO passengers (user,psw, aadhar, ACNO, Initial) VALUES ('user','psw', 'aadhar', 'ACNO', 'Initial');";
+$sql = "INSERT INTO userdetails (user,psw, aadhar, ACNO, Initial) VALUES ('user','psw', 'aadhar', 'ACNO', 'Initial');";
 	if(mysqli_query($conn, $sql))
 {  
 	$message = "You have been successfully registered";
 }
 else
 {  
-	$message = "Could not insert record"; 
+	$message = "Maa Chudao"; 
 }
 	echo "<script type='text/javascript'>alert('$message');</script>";
 }
